@@ -16,12 +16,12 @@
   <el-table :data="tableData" stripe style="width: 100%">
     <el-table-column prop="permissionId" label="permissionId" width="350" />
     <el-table-column prop="permissionName" label="permissionName" width="350" />
-    <el-table-column
+    <!-- <el-table-column
       prop="type"
       label="type"
       width="350"
       :formatter="typeFormat"
-    />
+    /> -->
     <el-table-column prop="brief" label="brief" width="500" />
     <el-table-column fixed="right" label="操作" v-show="perm">
     </el-table-column>
@@ -74,13 +74,13 @@ const handleCurrentChange = () => {
   initGetPermissions()
 }
 
-const typeFormat = (row, column) => {
-  if (row.type === 0) {
-    return '菜单权限'
-  } else {
-    return '按钮权限'
-  }
-}
+// const typeFormat = (row, column) => {
+//   if (row.type === 0) {
+//     return '菜单权限'
+//   } else {
+//     return '按钮权限'
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>
